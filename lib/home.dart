@@ -28,30 +28,39 @@ class _HomeState extends State<Home> {
     );
 
     return Scaffold(
-      appBar: AppBar(
-        //backgroundColor: Colors.transparent,
-        elevation: 1.0,
-        bottomOpacity: 0.0,
-        toolbarOpacity: 1.0,
-        title: Text("Hack Moral V2"),
-        centerTitle: true,
-      ),
+      // appBar: AppBar(
+      //   //backgroundColor: Colors.transparent,
+      //   elevation: 1.0,
+      //   bottomOpacity: 0.0,
+      //   toolbarOpacity: 1.0,
+      //   title: Text("Hack Moral V2"),
+      //   centerTitle: true,
+      // ),
       body: Container(
         decoration: BoxDecoration(color: Colors.grey[100]),
         child: ListView(
           children: <Widget>[
             Container(
-              decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/1.jpg"),fit: BoxFit.cover,)),
               width: double.maxFinite,
               height: MediaQuery.of(context).size.height,
               child: Card(
                 elevation: 100.0,
                 margin: EdgeInsets.fromLTRB(30.0, 0.0, 30.0, 0.0),
                 child: Container(
-                  
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                    image: AssetImage("1.jpg"),
+                    fit: BoxFit.cover,
+                  )),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
+                      Container(
+                        //width: MediaQuery.of(context).size.width*0.4,
+                        height: MediaQuery.of(context).size.width*0.2,
+                        child: Image.asset("logo.png",fit: BoxFit.fitHeight,),
+                      ),
+                      SizedBox(height: 30.0,),
                       Container(
                         child: Wrap(
                           alignment: WrapAlignment.center,
@@ -66,18 +75,20 @@ class _HomeState extends State<Home> {
                                 children: <Widget>[
                                   Text(
                                     difference.inDays.toString(),
-                                    style: TextStyle(fontSize: 80),
+                                    style: TextStyle(
+                                        fontSize: 80, color: Colors.white),
                                   ),
                                   Text(
                                     "Days",
-                                    style: TextStyle(fontSize: 50),
+                                    style: TextStyle(
+                                        fontSize: 50, color: Colors.white),
                                   ),
                                 ],
                               ),
                               decoration: BoxDecoration(
                                   shape: BoxShape.circle,
-                                  border:
-                                      Border.all(width: 5.0, color: Colors.grey)),
+                                  border: Border.all(
+                                      width: 5.0, color: Colors.grey)),
                             ),
                             Container(
                               height: 200,
@@ -87,18 +98,20 @@ class _HomeState extends State<Home> {
                                 children: <Widget>[
                                   Text(
                                     getHours(difference).toString(),
-                                    style: TextStyle(fontSize: 80),
+                                    style: TextStyle(
+                                        fontSize: 80, color: Colors.white),
                                   ),
                                   Text(
                                     "Hours",
-                                    style: TextStyle(fontSize: 50),
+                                    style: TextStyle(
+                                        fontSize: 50, color: Colors.white),
                                   ),
                                 ],
                               ),
                               decoration: BoxDecoration(
                                   shape: BoxShape.circle,
-                                  border:
-                                      Border.all(width: 5.0, color: Colors.grey)),
+                                  border: Border.all(
+                                      width: 5.0, color: Colors.grey)),
                             ),
                             Container(
                               height: 200,
@@ -108,18 +121,20 @@ class _HomeState extends State<Home> {
                                 children: <Widget>[
                                   Text(
                                     getMinutes(difference).toString(),
-                                    style: TextStyle(fontSize: 80),
+                                    style: TextStyle(
+                                        fontSize: 80, color: Colors.white),
                                   ),
                                   Text(
                                     "Minutes",
-                                    style: TextStyle(fontSize: 50),
+                                    style: TextStyle(
+                                        fontSize: 50, color: Colors.white),
                                   ),
                                 ],
                               ),
                               decoration: BoxDecoration(
                                   shape: BoxShape.circle,
-                                  border:
-                                      Border.all(width: 5.0, color: Colors.grey)),
+                                  border: Border.all(
+                                      width: 5.0, color: Colors.grey)),
                             ),
                             Container(
                               height: 200,
@@ -129,18 +144,20 @@ class _HomeState extends State<Home> {
                                 children: <Widget>[
                                   Text(
                                     getSeconds(difference).toString(),
-                                    style: TextStyle(fontSize: 80),
+                                    style: TextStyle(
+                                        fontSize: 80, color: Colors.white),
                                   ),
                                   Text(
                                     "Seconds",
-                                    style: TextStyle(fontSize: 50),
+                                    style: TextStyle(
+                                        fontSize: 50, color: Colors.white),
                                   ),
                                 ],
                               ),
                               decoration: BoxDecoration(
                                   shape: BoxShape.circle,
-                                  border:
-                                      Border.all(width: 5.0, color: Colors.grey)),
+                                  border: Border.all(
+                                      width: 5.0, color: Colors.grey)),
                             ),
                           ],
                         ),
